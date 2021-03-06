@@ -53,12 +53,12 @@ client.on("message", message =>{
     let sI = inv[authorId]["∞S"]
     var text = ""
     if(inv[authorId]["∞S"] !== 0) {
-      var text = "\n**∞<:ColoredStar:817061930241228851> : **"+sI
+      var text = "\n**∞<:ColoredStar:817061930241228851> : **"+sI            //<--- change this
       console.log("text has been edited")
     }
     let embed = new Discord.MessageEmbed () 
     .setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }) + '?size=1024')
-    .setTitle("inventory :")
+    .setTitle("inventory :")    //and this (the below this text)
     .setDescription("**1<:ColoredStar:817061930241228851> : **"+s1+"\n**2<:ColoredStar:817061930241228851> : **"+s2+"\n**3<:ColoredStar:817061930241228851> : **"+s3+"\n**4<:ColoredStar:817061930241228851> : **"+s4+"\n**5<:ColoredStar:817061930241228851> : **"+s5+"\n**7<:ColoredStar:817061930241228851> : **"+s7+"\n**Limited<:ColoredStar:817061930241228851> : **"+sL+text)
     .setColor("YELLOW")
     message.channel.send(embed)
